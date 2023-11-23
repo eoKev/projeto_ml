@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção de Classificador</title>
+</head>
+<body>
+    <h1>Seleção de Classificador</h1>
+
+    <form action="/classifier_result" method="post">
+        <label for="classifier">Escolha um classificador:</label>
+        <select name="classifier" id="classifier">
+            {% for classifier in classifiers %}
+                <option value="{{ classifier }}">{{ classifier }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Ver Resultados">
+    </form>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados do Classificador</title>
+</head>
+<body>
+    <h1>Resultados do Classificador</h1>
+    <h2>{{ classifier }}:</h2>
+
+    <p>Acurácia: {{ accuracy }}</p>
+    <p>F1-Score (Macro Average): {{ f1_score }}</p>
+
+    <h2>Matriz de Confusão:</h2>
+    <img src="data:image/png;base64,{{ confusion_matrix_url }}" alt="Confusion Matrix">
+
+
+    <br>
+    <a href="/">Voltar à seleção de classificador</a>
+</body>
+</html>
